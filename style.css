@@ -1,0 +1,207 @@
+*,
+*::after,
+*::before{
+    padding: 0;
+    border: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    height: 100%;
+}
+
+body{
+    cursor: url("image/free-icon-crosshair-486948.png"),pointer;
+    min-height: 100%;
+    counter-reset: score;
+    background-image: url("image/1625264353_19-kartinkin-com-p-fon-dlya-platformera-krasivie-foni-20.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0 bottom;
+    position: relative;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 50px;
+    color: rgb(255, 0, 0);
+    /* font-weight: bold; */
+    overflow: hidden;
+}
+
+.duck1{
+    width: 104px;
+    height: 98px;
+    position: relative;
+    overflow: hidden;
+    left: -10%;
+    top: 300px;
+}
+
+.duck2{
+    width: 104px;
+    height: 98px;
+    position: relative;
+    overflow: hidden;
+    left: -10%;
+    top: 500px;
+}
+
+.duck3{
+    width: 104px;
+    height: 98px;
+    position: relative;
+    overflow: hidden;
+    left: 110%;
+    top: 500px;
+}
+
+.duck4{
+    width: 104px;
+    height: 98px;
+    position: relative;
+    overflow: hidden;
+    left: 110%;
+    top: 500px;
+}
+
+.duck5{
+    width: 104px;
+    height: 98px;
+    position: relative;
+    overflow: hidden;
+    left: 110%;
+    top: 500px;
+}
+
+.duck label{
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    background-image: url(image/YTup.gif);
+    background-repeat: no-repeat;
+}
+
+.duck label:hover{
+    cursor: url("image/free-icon-crosshair-486948.png"),pointer;
+}
+
+/* .duck input{
+    visibility: hidden;
+    display: none;
+
+} */
+
+.duck input{
+    position: absolute;
+    left: -80px;
+}
+
+.duck input:checked{
+    counter-increment: score;
+}
+
+.duck input:checked + label{
+    display: none;
+}
+
+.count{
+    position:absolute;
+    bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-shadow: 5px 5px 1px black;
+}
+
+.count::after{
+    content: counter(score);
+}
+
+.duck1{
+    animation: fly1 ease 20s;
+}
+
+.duck2{
+    animation: fly2 ease 10s 3s;
+}
+
+
+.duck3{
+    animation: fly3 ease 15s 5s;
+}
+
+.duck4{
+    animation: fly4 ease 20s;
+}
+
+.duck5{
+    animation: fly5 ease 20s;
+}
+
+@keyframes fly1{
+    0%{left: -10%;}
+    25%{left: 25%;
+        top: 150px;
+        transform: rotate(180deg);}
+    50%{left: 60%;
+        top: 550px;}
+    75%{left: 80%;
+        top: 100px;}
+    100%{left: 110%;
+        top:300px;}
+}
+
+@keyframes fly2{
+    0%{left: -10%;}
+    20%{left: 10%;
+        top: 300px;
+        transform: rotate(360deg);}
+    30%{left: 40%;
+        top: 600px;}
+    60%{left: 75%;
+        top: 100px;}
+    100%{left: 110%;
+        top:300px;}
+}
+
+
+@keyframes fly3{
+    0%{right: 110%;}
+    25%{left: 80%;
+        top: 150px;
+        transform: rotate(90deg);}
+    50%{left: 60%;
+        top: 550px;}
+    75%{left: 40%;
+        top: 100px;}
+    100%{left: -10%;
+        top:300px;}
+}
+
+@keyframes fly4{
+    0%{right: 110%;}
+    10%{left: 80%;
+        top: 150px;}
+    25%{left: 60%;
+        top: 550px;}
+    60%{left: 40%;
+        top: 100px;}
+    100%{left: -10%;
+        top:300px;}
+}
+
+@keyframes fly5{
+    0%{right: 110%;}
+    10%{left: 80%;
+        top: 150px;}
+    20%{left: 60%;
+        top: 550px;}
+    30%{left: 60%;
+        top: 550px;}
+    40%{left: 60%;
+        top: 550px;}
+    50%{left: 60%;
+        top: 550px;}
+    60%{left: 40%;
+        top: 100px;}
+    100%{left: -10%;
+        top:300px;}
+}
